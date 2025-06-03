@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar: React.FC = () => {
   {/* Left: Logo */}
   <div className="flex-1">
     <Link href="/" className="block">
-      <img src="/Logo6.png" alt="Logo" className="h-20 sm:h-28 w-auto" />
+      <Image src="/logo.png" alt="Logo" className="h-20 sm:h-28 w-auto" />
     </Link>
   </div>
 

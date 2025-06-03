@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import Image from 'next/image';
 
 const JosaaHelpForm = () => {
   // Form field states
@@ -58,7 +59,7 @@ const JosaaHelpForm = () => {
 useEffect(() => {
     // Initialize EmailJS with your public key
     emailjs.init('_COlWtMk04vHkowPi');
-  }, []);
+  }, [fullName, email]);
 
 
   const validateEmail = (value: string) => {
@@ -312,7 +313,7 @@ useEffect(() => {
       const receiptUrl = await uploadToCloudinary(paymentReceipt!);
 
       // Build payload for SheetDB
-      const payload: any = {
+      const payload = {
         fullName,
         email,
         phone,
@@ -374,10 +375,16 @@ useEffect(() => {
         
       setIsSubmitted(true);
       resetForm();
-    } catch (error: any) {
-      alert(`Submission failed: ${error.message || 'Unknown error'}`);
-      console.error(error);
-    } finally {
+    } catch (error: unknown) {
+  if (error instanceof Error) {
+    alert(`Submission failed: ${error.message}`);
+    console.error(error);
+  } else {
+    alert('Submission failed: Unknown error');
+    console.error('Unknown error:', error);
+  }
+}
+finally {
       setIsSubmitting(false);
     }
   };
@@ -772,7 +779,7 @@ useEffect(() => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div className="text-center border border-gray-300 rounded-lg p-4">
             <p className="text-gray-700 font-medium mb-2">Scan to Pay (₹499 only)</p>
-            <img
+            <Image
               src="/images/download.png"
               alt="QR Code"
               className="mx-auto w-48 h-48 rounded-lg border"

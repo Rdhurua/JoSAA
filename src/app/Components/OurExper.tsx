@@ -2,9 +2,10 @@ import React from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { experts } from '../utils/Data';
+import Image from 'next/image';
 
 
 const OurExpert = () => {
@@ -35,7 +36,7 @@ const OurExpert = () => {
       {experts.map((expert, idx) => (
         <SwiperSlide key={idx} className='px-[15px] py-[30px]'>
           <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105 p-8 flex flex-col items-center text-center h-full">
-            <img
+            <Image
               src={expert.img}
               alt={expert.name}
               className="w-28 h-28 rounded-full object-cover border-4 border-blue-200 shadow-md mb-4"

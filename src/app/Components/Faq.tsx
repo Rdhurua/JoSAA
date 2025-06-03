@@ -13,7 +13,7 @@ export default function FAQSection() {
    <div id="faq" className="p-6 sm:p-10 bg-white">
   <section className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-700 mb-8 sm:mb-10">
-      Got Questions? We've Got Answers!
+      Got Questions? We have Got Answers!
     </h2>
     <div className="space-y-4">
       {faqData.map((item, index) => (

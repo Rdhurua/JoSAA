@@ -31,7 +31,8 @@ const Contact = () => {
       Contact Us
     </h2>
     <p className="text-gray-700 text-center mb-10 text-base sm:text-lg max-w-xl mx-auto">
-      Have a question, suggestion, or issue? We'd love to hear from you!
+      Have a question, suggestion, or issue? <p>We&apos;re here to help you!</p>
+
     </p>
 
     <form onSubmit={handleSubmit} className="space-y-6">
