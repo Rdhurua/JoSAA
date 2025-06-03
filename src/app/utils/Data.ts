@@ -59,11 +59,11 @@ export const faqData = [
   {
     question: "Do you help in both JoSAA and CSAB counselling?",
     answer: "Yes, we guide students through both JoSAA and CSAB counselling. Initially, we focus on JoSAA counselling and help you aim for the best possible admission. If you get your desired college or branch through JoSAA, our work ends there. However, if you don't get a satisfactory allotment, we assess your chances and advise whether it's worth proceeding with CSAB counselling. If you choose to go ahead after our guidance, we continue to support you through CSAB as well — without any extra charges.",
-  },
-  {
-    question: "Do you have a referral policy or any discount for referring friends?",
-    answer: "Yes, we have a referral policy to reward both the referrer and the referred student. If you refer a friend, you will receive ₹30 for each successful referral. Meanwhile, the student you refer will get a ₹20 discount on the counselling fee by applying your referral code during registration. It's a simple way to benefit together while helping more students make smart choices during JoSAA counselling.",
   }
+  // {
+  //   question: "Do you have a referral policy or any discount for referring friends?",
+  //   answer: "Yes, we have a referral policy to reward both the referrer and the referred student. If you refer a friend, you will receive ₹30 for each successful referral. Meanwhile, the student you refer will get a ₹20 discount on the counselling fee by applying your referral code during registration. It's a simple way to benefit together while helping more students make smart choices during JoSAA counselling.",
+  // }
 ];
 
 export const aboutData=[
