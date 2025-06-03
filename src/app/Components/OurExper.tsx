@@ -37,10 +37,13 @@ const OurExpert = () => {
         <SwiperSlide key={idx} className='px-[15px] py-[30px]'>
           <div className="bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105 p-8 flex flex-col items-center text-center h-full">
             <Image
-              src={expert.img}
-              alt={expert.name}
-              className="w-28 h-28 rounded-full object-cover border-4 border-blue-200 shadow-md mb-4"
-            />
+  src={expert.img}
+  alt={expert.name}
+  width={112}
+  height={112}
+  className="w-28 h-28 rounded-full object-cover border-4 border-blue-200 shadow-md mb-4"
+/>
+
             <h3 className="text-xl font-bold text-gray-700">{expert.name}</h3>
             <p className="text-gray-600 text-sm mt-2">{expert.desc}</p>
           </div>

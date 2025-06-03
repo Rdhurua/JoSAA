@@ -30,7 +30,13 @@ const Navbar: React.FC = () => {
   {/* Left: Logo */}
   <div className="flex-1">
     <Link href="/" className="block">
-      <Image src="/logo.png" alt="Logo" className="h-20 sm:h-28 w-auto" />
+      <Image
+  src="/logo.png"
+  alt="Logo"
+  width={160} // roughly matches h-20 (80px) * 2 (auto width)
+  height={80} // h-20 = 80px
+  className="h-20 sm:h-28 w-auto"
+/>
     </Link>
   </div>
 
