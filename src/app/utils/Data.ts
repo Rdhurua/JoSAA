@@ -1,37 +1,37 @@
 export const experts = [
   {
     name: 'Ratikanta Behera',
-    img: '/images/rati.jpg',
+    img: '/images/rati.JPG',
     desc: 'B.Tech, NIT Rourkela — Experienced counsellor committed to helping aspirants make confident and informed choices.',
   },
   {
     name: 'Sreyash Sahoo',
-    img: '/images/sreyash_1.jpg',
+    img: '/images/sreyash_1.JPG',
     desc: 'B.Tech, NIT Rourkela — Caring career coach focused on empowering students to achieve their dream admissions.',
   },
    {
     name: 'Swapnil Kumar Mohanty',
-    img: '/images/swap.jpg',
+    img: '/images/swap.JPG',
     desc: 'B.Tech, NIT Rourkela — Passionate JEE mentor dedicated to guiding students with personalized counselling and heartfelt support.',
   },
   {
     name: 'Suraj Kumar Behera',
-    img: '/images/suraj_1.jpg',
+    img: '/images/suraj_1.JPG',
     desc: 'B.Tech, NIT Rourkela — Thoughtful education strategist passionate about long-term academic success and college selection.',
   },
   {
     name: 'Durga Prasad Nayak',
-    img: '/images/durga_1.jpg',
+    img: '/images/durga_1.JPG',
     desc: 'B.Tech, NIT Rourkela — Friendly mentor with years of experience guiding engineering aspirants through every step.',
   },
   {
     name: 'Himanjit Choudhury',
-    img: '/images/himanjit_1.jpg',
+    img: '/images/himanjit_1.JPG',
     desc: 'B.Tech, NIT Rourkela — Supportive education consultant with deep insight into counselling processes and student needs.',
   },
   {
     name: 'Rinku Dhurua',
-    img: '/images/rinku.jpg',
+    img: '/images/rinku.JPG',
     desc: 'B.Tech, NIT Rourkela — Motivational coach dedicated to helping students stay positive and focused during admissions.',
   },
 ];
