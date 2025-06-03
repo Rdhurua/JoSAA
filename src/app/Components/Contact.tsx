@@ -10,6 +10,7 @@ const Contact = () => {
   });
 
   const [status, setStatus] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false); // Track submission state
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -19,9 +20,12 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus(null);
 
     try {
-      const response = await fetch('https://sheetdb.io/api/v1/ho4n6sbykq4k1', {
+      console.log(process.env.NEXT_PUBLIC_SHEET_DB_C);
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SHEET_DB_C}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -38,6 +42,8 @@ const Contact = () => {
     } catch (error) {
       console.error('Error:', error);
       setStatus('An error occurred. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -98,9 +104,10 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl hover:cursor-pointer transition"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl hover:cursor-pointer transition disabled:opacity-60"
+                disabled={loading}
               >
-                Send Message
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
             </div>
           </form>

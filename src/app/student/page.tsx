@@ -164,8 +164,8 @@ useEffect(() => {
   const uploadToCloudinary = async (file: File): Promise<string> => {
     const formData = new FormData();
     formData.append('file', file);
-    formData.append('upload_preset', 'josaa helper');
-    const response = await fetch('https://api.cloudinary.com/v1_1/dvwkqvrra/auto/upload', {
+    formData.append('upload_preset', 'JoSAA_upload');
+    const response = await fetch(`https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_NAME}/auto/upload`, {
       method: 'POST',
       body: formData,
     });
@@ -344,7 +344,7 @@ useEffect(() => {
       };
 
       // Submit to SheetDB
-      const sheetRes = await fetch('https://sheetdb.io/api/v1/dlfwzbb614e3i', {
+      const sheetRes = await fetch(`${process.env.NEXT_PUBLIC_SHEET_DB}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ data: payload }),
@@ -358,15 +358,15 @@ useEffect(() => {
       
       // Send confirmation email via EmailJS
       emailjs.send(
-          'service_r707khv',
-          'template_ug3qvgk',
+          `${process.env.NEXT_PUBLIC_SERVICE_ID}`,
+          `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
           {
             to_email: email,
             to_name: fullName,
             message: 'Thank you for submitting. We will be back to you within 12 hours.',
             subject: "You are one step closer to get the admission you deserve"
           },
-          'PrHo9a0dAgoki9TWJ'
+          `${process.env.NEXT_PUBLIC_USER_ID}`
         )
         .catch((emailErr) => {
           console.error('EmailJS error:', emailErr);
@@ -780,10 +780,12 @@ finally {
           <div className="text-center border border-gray-300 rounded-lg p-4">
             <p className="text-gray-700 font-medium mb-2">Scan to Pay (₹499 only)</p>
             <Image
-              src="/images/download.png"
-              alt="QR Code"
-              className="mx-auto w-48 h-48 rounded-lg border"
-            />
+  src="/images/download.jpg"
+  alt="QR Code"
+  width={192} // w-48 = 12rem = 192px
+  height={192} // h-48 = 192px
+  className="mx-auto rounded-lg border"
+/>
           </div>
           <FileInput
             label="Upload Payment Receipt <span className='text-red-500'>*</span>"
