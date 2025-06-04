@@ -1,8 +1,7 @@
 const HowItWorks = () => {
   return (
-    <div className="border-b-2 border-gray-400 bg-white">
+    <div  id="how-it-works" className="border-b-2 border-gray-400 bg-white p-6 sm:p-10">
   <section
-    id="how-it-works"
     className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-16"
   >
     <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-700 mb-16 text-center">
