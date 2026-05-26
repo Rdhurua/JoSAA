@@ -780,7 +780,7 @@ finally {
           <div className="text-center border border-gray-300 rounded-lg p-4">
             <p className="text-gray-700 font-medium mb-2">Scan to Pay (₹599 only)</p>
             <Image
-  src="/images/paymentQR.jpeg"
+  src="/images/paymentQR.jpeg" //bug issued
   alt="QR Code"
   width={192} // w-48 = 12rem = 192px
   height={192} // h-48 = 192px
