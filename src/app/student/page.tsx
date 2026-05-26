@@ -778,9 +778,9 @@ finally {
         {/* Scan to Pay Box + Payment Receipt */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div className="text-center border border-gray-300 rounded-lg p-4">
-            <p className="text-gray-700 font-medium mb-2">Scan to Pay (₹499 only)</p>
+            <p className="text-gray-700 font-medium mb-2">Scan to Pay (₹599 only)</p>
             <Image
-  src="/images/download.jpg"
+  src="/images/paymentQR.jpeg"
   alt="QR Code"
   width={192} // w-48 = 12rem = 192px
   height={192} // h-48 = 192px
